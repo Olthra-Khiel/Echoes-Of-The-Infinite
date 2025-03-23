@@ -17,7 +17,7 @@
         }
 
         a {
-            font-size: 80px;
+            font-size: 20px;
             color: blue;
             text-decoration: none;
         }
@@ -32,10 +32,41 @@
             overflow: hidden;
             font-size: 24px;
         }
+
+        #media-container {
+            display: none; /* Hidden until typing is complete */
+            margin-top: 20px;
+        }
+
+        video, audio {
+            width: 60%;
+            max-width: 800px;
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+
+        audio {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="typing-container" id="typing-text"></div>
+
+    <!-- Video & Audio Container (Hidden initially) -->
+    <div id="media-container">
+        <video controls>
+            <source src="your-video.mp4" type="video/mp4">
+            <source src="your-video.webm" type="video/webm">
+            <source src="your-video.ogv" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <audio id="background-audio" controls>
+            <source src="your-audio.mp3" type="audio/mpeg">
+            <source src="your-audio.ogg" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
 
     <script>
         const text = [
@@ -46,6 +77,9 @@
         ];
 
         const container = document.getElementById("typing-text");
+        const mediaContainer = document.getElementById("media-container");
+        const audio = document.getElementById("background-audio");
+
         let index = 0, charIndex = 0;
         let currentLine = "";
 
@@ -55,14 +89,17 @@
                     currentLine += text[index][charIndex];
                     container.innerHTML = currentLine;
                     charIndex++;
-                    setTimeout(typeText, 10); // Adjust speed here
+                    setTimeout(typeText, 50); // Adjust speed here
                 } else {
                     currentLine += "<br>"; // New line after a full sentence
                     container.innerHTML = currentLine;
                     charIndex = 0;
                     index++;
-                    setTimeout(typeText, 100); // Pause before next line
+                    setTimeout(typeText, 500); // Pause before next line
                 }
+            } else {
+                mediaContainer.style.display = "block"; // Show video & audio player after typing
+                audio.play(); // Auto-play the audio
             }
         }
 
