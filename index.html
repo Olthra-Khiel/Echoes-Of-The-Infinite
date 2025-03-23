@@ -3,24 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Wikipedia Link</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            font-family: 'VT323', monospace;
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+            overflow: hidden;
         }
-        h1 {
-            color: #333;
+
+        a {
+            font-size: 80px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .typing-container {
+            display: inline-block;
+            white-space: pre-wrap;
+            overflow: hidden;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
+    <div class="typing-container" id="typing-text"></div>
+
+    <script>
+        const text = [
+            "Welcome to My Simple Website",
+            "Click the link below to visit Wikipedia:",
+            "",
+            "<a href='https://www.wikipedia.org' target='_blank'>Go to Wikipedia</a>"
+        ];
+
+        const container = document.getElementById("typing-text");
+        let index = 0, charIndex = 0;
+        let currentLine = "";
+
+        function typeText() {
+            if (index < text.length) {
+                if (charIndex < text[index].length) {
+                    currentLine += text[index][charIndex];
+                    container.innerHTML = currentLine;
+                    charIndex++;
+                    setTimeout(typeText, 10); // Adjust speed here
+                } else {
+                    currentLine += "<br>"; // New line after a full sentence
+                    container.innerHTML = currentLine;
+                    charIndex = 0;
+                    index++;
+                    setTimeout(typeText, 100); // Pause before next line
+                }
+            }
+        }
+
+        setTimeout(typeText, 500); // Start typing after a slight delay
+    </script>
 </body>
 </html>
