@@ -3,107 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wikipedia Link</title>
+    <title>MS-DOS Journal</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
         body {
-            font-family: 'VT323', monospace;
-            text-align: center;
-            margin-top: 50px;
             background-color: black;
-            color: white;
-            overflow: hidden;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            padding: 20px;
         }
 
-        a {
-            font-size: 20px;
-            color: blue;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .typing-container {
-            display: inline-block;
-            white-space: pre-wrap;
-            overflow: hidden;
-            font-size: 24px;
-        }
-
-        #media-container {
-            display: none; /* Hidden until typing is complete */
-            margin-top: 20px;
-        }
-
-        video, audio {
-            width: 60%;
+        .container {
             max-width: 800px;
-            border: 3px solid white;
-            border-radius: 5px;
+            margin: auto;
+            padding: 40px;
+            border: 2px solid #00FF00;
+            background-color: black;
         }
 
-        audio {
-            margin-top: 10px;
+        .title {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            text-align: center;
+
+        }
+
+        .prompt::before {
+            content: 'C:\\> ';
+            
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            background-color: black;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #00FF00;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="typing-container" id="typing-text"></div>
-
-    <!-- Video & Audio Container (Hidden initially) -->
-    <div id="media-container">
-        <video controls>
-            <source src="your-video.mp4" type="video/mp4">
-            <source src="your-video.webm" type="video/webm">
-            <source src="your-video.ogv" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-        <audio id="background-audio" controls>
-            <source src="your-audio.mp3" type="audio/mpeg">
-            <source src="your-audio.ogg" type="audio/ogg">
-            Your browser does not support the audio tag.
-        </audio>
+    <div class="container">
+        <div class="title">MS-DOS Journal</div>
+        <div class="entry">
+            <span class="prompt"></span> This is a sample journal entry.
+        </div>
+        <textarea placeholder="Write your entry here..."></textarea>
     </div>
-
-    <script>
-        const text = [
-            "Welcome to My Simple Website",
-            "Click the link below to visit Wikipedia:",
-            "",
-            "<a href='https://www.wikipedia.org' target='_blank'>Go to Wikipedia</a>"
-        ];
-
-        const container = document.getElementById("typing-text");
-        const mediaContainer = document.getElementById("media-container");
-        const audio = document.getElementById("background-audio");
-
-        let index = 0, charIndex = 0;
-        let currentLine = "";
-
-        function typeText() {
-            if (index < text.length) {
-                if (charIndex < text[index].length) {
-                    currentLine += text[index][charIndex];
-                    container.innerHTML = currentLine;
-                    charIndex++;
-                    setTimeout(typeText, 50); // Adjust speed here
-                } else {
-                    currentLine += "<br>"; // New line after a full sentence
-                    container.innerHTML = currentLine;
-                    charIndex = 0;
-                    index++;
-                    setTimeout(typeText, 500); // Pause before next line
-                }
-            } else {
-                mediaContainer.style.display = "block"; // Show video & audio player after typing
-                audio.play(); // Auto-play the audio
-            }
-        }
-
-        setTimeout(typeText, 500); // Start typing after a slight delay
-    </script>
 </body>
 </html>
