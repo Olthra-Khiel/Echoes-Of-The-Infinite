@@ -5,8 +5,7 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace, sans-serif;
-    line-height: .8;
+    font-family: 'VCR OSD Mono', monospace; /* VCR OSD Mono font */    line-height: .8;
     color : #ffffff;
     background-color: #000000;
     scroll-behavior: smooth;
@@ -14,7 +13,7 @@ body {
 
 header {
     height: 5px;
-    font-size: 12x;
+    font-size: z;
     background: linear-gradient(to top, #4f0000, #c30000);    padding: 32px 0;
     align-items: center;
     text-align: center;
@@ -41,10 +40,11 @@ nav ul li a {
 
 .title{
     text-align : left;
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-family: 'VCR OSD Mono', monospace; /* VCR OSD Mono font */   
     font-size : 3rem;
     color: #ff0000;
     font-weight: bold;
+    margin-bottom:  10px;
 }
 
 
@@ -53,7 +53,7 @@ a.hyper-link {
     color: #0099ff; /* Blue color for the link */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make the text bold */
-    font-family: Arial, sans-serif; /* Change font */
+    font-family: 'VCR OSD Mono', monospace; /* VCR OSD Mono font */   
 }
 
 a.hyper-link:hover {
@@ -80,6 +80,7 @@ a.hyper-link:active {
   }
 
   .container .fixed-position {
+    position: relative;
     min: width 1920px;
     min: height 1080px;
     
@@ -87,7 +88,28 @@ a.hyper-link:active {
 
   section{
     position: relative;
-    top : 150px;
-
-    font-size: 12px;
+    transition: border-width 0.4s ease;
+  }
+  section:nth-child(1){
+    position: relative;
+  }
+  section:nth-child(2){
+    position: relative;
+    top : 100px;
+  }
+  section:nth-child(3){
+    position: relative;
+    top : 200px;
+  }
+  section:nth-child(3){
+    position: relative;
+    top : 300px;
+  }
+  section:nth-child(4){
+    position: relative;
+    top : 400px;
+  }
+  section:nth-child(5){
+    position: relative;
+    top : 500px;
   }
