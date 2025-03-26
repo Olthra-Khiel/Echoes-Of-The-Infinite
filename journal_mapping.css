@@ -18,9 +18,8 @@ body {
 }
 
 header {
-    height: 5px;
     font-size: z;
-    background: linear-gradient(to top, #4f0000, #c30000);    padding: 32px 0;
+    background: linear-gradient(to top, #4f0000, #c30000);    padding: 24px 0;
     align-items: center;
     text-align: center;
 }
@@ -48,7 +47,7 @@ nav ul li a {
     text-align : left;
     font-family: VCR-OSD;
     font-size : 3rem;
-    color: #ff0000;
+    color: #ffffff;
     font-weight: bold;
     margin-bottom:  10px;
 }
@@ -74,24 +73,45 @@ nav ul li a {
 
   section{
     position: fixed;
+    white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0px;
+    animation: typing .5s steps(30, end) forwards;
+    animation-play-state: running;
+
   }
   section:nth-child(1){
     position: relative;
     top : 0px;
+    animation-delay: 0s;
   }
   section:nth-child(2){
     position: relative;
     top : 100px;
+
+    animation-delay: .2s;
   }
   section:nth-child(3){
     position: relative;
     top : 200px;
+    animation-delay: .4s;
   }
   section::before{
     content: "";
     position: absolute;
     top: -15px; left: -15px; right: -15px; bottom: -15px;
     border-radius: 8px;
-    border: 4px dashed rgb(255, 255, 255);
+    border: 4px dashed rgb(255, 0, 0);
     z-index: -1;
   }
+
+  @keyframes typing {
+    from {
+      max-width: 0;
+    }
+    to {
+        max-width: 100%;
+    }
+}
