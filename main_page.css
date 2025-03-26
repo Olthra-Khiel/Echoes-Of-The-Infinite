@@ -19,33 +19,12 @@ body {
 .title{
   text-align: center;
   font-family: VCR-OSD;
-    font-size : 128px;
+    font-size : 128PX;
     color: #ff0000;
     font-weight: bold;
     margin-top: 50px;
     margin-bottom:  100px;
     position: relative;
-}
-
-/*HYPERLINK*/
-a.hyper-link {
-    color: #0099ff; /* Blue color for the link */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the text bold */
-    font-family: VCR-OSD;
-}
-
-a.hyper-link:hover {
-    color: #2e46cc; /* Green color when hovered */
-    text-decoration: underline; /* Underline on hover */
-}
-
-a.hyper-link:visited {
-    color: #ff0000; /* Purple color after the link is visited */
-}
-
-a.hyper-link:active {
-    color: #e74c3c; /* Red color when clicked */
 }
 
 .container {
@@ -56,6 +35,7 @@ a.hyper-link:active {
     align-items:center;
     justify-content:center;
   }
+
 
 .fixed-position {
     position: fixed;

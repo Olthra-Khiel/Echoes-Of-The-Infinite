@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+src: url(VCR_OSD_MONO_1.001.ttf);
+font-family: VCR-OSD;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: VCR-OSD;
+  color : #ffffff;
+  background-color: #000000;
+  font-size: 64px;
+  position: static;
+  align-self: center;
+  text-align: center;
+}

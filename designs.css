@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.margins {
+    position: relative;
+    
+    height: 1920px;
+    width: 1080px;
+    border-bottom:4px dashed red;
+    border-right:4px dashed red;
+    border-left: 4px double green;
+  }
+  

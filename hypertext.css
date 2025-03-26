@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HYPERLINK*/
+a.hyper-link {
+    color: #0099ff; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    font-family: VCR-OSD;
+}
+
+a.hyper-link:hover {
+    color: #2e46cc; /* Green color when hovered */
+    text-decoration: underline; /* Underline on hover */
+}
+
+a.hyper-link:visited {
+    color: #ff0000; /* Purple color after the link is visited */
+}
+
+a.hyper-link:active {
+    color: #ff1900; /* Red color when clicked */
+}
