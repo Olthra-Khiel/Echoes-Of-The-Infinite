@@ -19,7 +19,9 @@ body {
 
 header {
     font-size: z;
-    background: linear-gradient(to top, #4f0000, #c30000);    padding: 24px 0;
+    padding: 15px;
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
     align-items: center;
     text-align: center;
 }
