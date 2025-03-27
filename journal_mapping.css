@@ -84,7 +84,7 @@ nav ul li a {
     overflow: hidden;
 
     max-width: 0%;
-    animation: typing 1.5s steps(30, end) forwards;
+    animation: typing .5s steps(30, end) forwards;
     animation-play-state: running;
     margin-top: 15em;
     margin-bottom: 15e;
@@ -95,11 +95,47 @@ nav ul li a {
   }
   section:nth-child(2){
     position: relative;
-    animation-delay: .8s;
+    animation-delay: .1s;
   }
   section:nth-child(3){
     position: relative;
-    animation-delay: 1.6s;
+    animation-delay: .2s;
+  }
+  section:nth-child(4){
+    position: relative;
+    animation-delay: .3s;
+  }
+  section:nth-child(5){
+    position: relative;
+    animation-delay: .4s;
+  }
+  section:nth-child(6){
+    position: relative;
+    animation-delay: .5s;
+  }
+  section:nth-child(7){
+    position: relative;
+    animation-delay: .6s;
+  }
+  section:nth-child(8){
+    position: relative;
+    animation-delay: .7s;
+  }
+  section:nth-child(9){
+    position: relative;
+    animation-delay: .8s;
+  }
+  section:nth-child(10){
+    position: relative;
+    animation-delay: .9s;
+  }
+  section:nth-child(11){
+    position: relative;
+    animation-delay: 1s;
+  }
+  section:nth-child(12){
+    position: relative;
+    animation-delay: 1.1s;
   }
   section::before{
     content: "";

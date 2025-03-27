@@ -20,4 +20,9 @@ body {
   position: static;
   align-self: center;
   text-align: center;
+
+  background-image: url('TEXTURES/START.gif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
 }

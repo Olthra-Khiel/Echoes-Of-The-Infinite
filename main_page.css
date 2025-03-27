@@ -18,6 +18,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
+    
+    
 }
 
 .title{
@@ -27,9 +29,16 @@ body {
     font-size : 5em;
     color: #ff0000;
     font-weight: bold;
-    margin-top: .5em;
+    margin-top: 3.5em;
     margin-bottom:  1em;
     position: relative;
+
+    position: fixed;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0%;
+    animation: typing .5s steps(30, end) forwards;
+    animation-play-state: running;
 }
 
 .container {
@@ -39,6 +48,7 @@ body {
     display:flex;
     align-items:center;
     justify-content:center;
+    
   }
 
 
@@ -46,4 +56,24 @@ body {
     position: fixed;
     text-align: center;
     top: 20em;
+
+    animation: fadeIn 1.5s ease-in-out;
   }
+
+@keyframes typing {
+    from {
+      max-width: 0;
+    }
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
