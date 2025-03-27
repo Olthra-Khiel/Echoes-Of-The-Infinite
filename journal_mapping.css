@@ -31,6 +31,16 @@ header {
     text-align: center;
 }
 
+footer {
+  padding: 1em;
+  
+  font-size: 1em;
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed white;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 nav ul {
     list-style: none;
 }
@@ -87,7 +97,7 @@ nav ul li a {
     animation: typing .5s steps(30, end) forwards;
     animation-play-state: running;
     margin-top: 15em;
-    margin-bottom: 15e;
+    margin-bottom: 15em;
   }
   section:nth-child(1){
     position: relative;

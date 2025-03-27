@@ -22,6 +22,7 @@ function typeWriterEffect(element, speed = 50) {
     element.innerText = ""; // Clear text initially
     let i = 0;
 
+
     function type() {
         if (IsSkip)
             {
@@ -47,9 +48,10 @@ function Complete_typeWriterEffect(element) {
 
 document.addEventListener("DOMContentLoaded", () => {
     IsSkip = false; 
+    const speed = document.body.getAttribute("data-speed"); // Get target page
 
     document.querySelectorAll("[id^=typewriter]").forEach((element) => {
-        typeWriterEffect(element, 50);
+        typeWriterEffect(element, speed);
     });
 });
 
@@ -60,4 +62,4 @@ var filename = path.split('/').pop();
 var className = filename.split('.')[0];
 
 // Display the file name in the paragraph
-document.getElementById("filename").textContent = "BINTANAx128-OS - [PAGE: " + className + "]" + " -   [PRESS SPACEBAR TO PROGRESS]";
+document.getElementById("filename").textContent = "BINTANAx128-OS - [PAGE: " + className + "]" + " -   [PRESS SPACEBAR TO PROGRESS]     -   [PRESS ESCAPE TO LEAVE ENTRY]";
