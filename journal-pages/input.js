@@ -53,3 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
         typeWriterEffect(element, 50);
     });
 });
+
+var path = window.location.pathname;
+
+// Extract the file name
+var filename = path.split('/').pop();
+var className = filename.split('.')[0];
+
+// Display the file name in the paragraph
+document.getElementById("filename").textContent = "BINTANAx128-OS - [PAGE: " + className + "]" + " -   [PRESS SPACEBAR TO PROGRESS]";

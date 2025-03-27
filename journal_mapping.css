@@ -23,8 +23,8 @@ body {
 }
 
 header {
-    font-size: z;
-    padding: 15px;
+    font-size: 1em;
+    padding: 1em;
     border-top: 2px dashed white;
     border-bottom: 2px dashed white;
     align-items: center;
@@ -82,11 +82,12 @@ nav ul li a {
     position: fixed;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 0px;
-    animation: typing .5s steps(30, end) forwards;
-    animation-play-state: running;
-    padding: 150px;
 
+    max-width: 0%;
+    animation: typing 1.5s steps(30, end) forwards;
+    animation-play-state: running;
+    margin-top: 15em;
+    margin-bottom: 15e;
   }
   section:nth-child(1){
     position: relative;
@@ -94,11 +95,11 @@ nav ul li a {
   }
   section:nth-child(2){
     position: relative;
-    animation-delay: .2s;
+    animation-delay: .8s;
   }
   section:nth-child(3){
     position: relative;
-    animation-delay: .4s;
+    animation-delay: 1.6s;
   }
   section::before{
     content: "";

@@ -21,13 +21,14 @@ body {
 }
 
 .title{
+  line-height: normal;
   text-align: center;
   font-family: VCR-OSD;
-    font-size : 128PX;
+    font-size : 5em;
     color: #ff0000;
     font-weight: bold;
-    margin-top: 50px;
-    margin-bottom:  100px;
+    margin-top: .5em;
+    margin-bottom:  1em;
     position: relative;
 }
 
@@ -43,9 +44,6 @@ body {
 
 .fixed-position {
     position: fixed;
-    min: width 500px;
-    min: height 500px;
-    text-align: left;
-
-    top: 250px;
+    text-align: center;
+    top: 20em;
   }
