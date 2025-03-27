@@ -15,6 +15,11 @@ body {
     color : #ffffff;
     background-color: #000000;
     scroll-behavior: smooth;
+
+    background-image: url('TEXTURES/DimBG.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
 }
 
 header {
@@ -77,27 +82,22 @@ nav ul li a {
     position: fixed;
     white-space: nowrap;
     overflow: hidden;
-    white-space: nowrap;
-    overflow: hidden;
     max-width: 0px;
     animation: typing .5s steps(30, end) forwards;
     animation-play-state: running;
+    padding: 150px;
 
   }
   section:nth-child(1){
     position: relative;
-    top : 0px;
     animation-delay: 0s;
   }
   section:nth-child(2){
     position: relative;
-    top : 100px;
-
     animation-delay: .2s;
   }
   section:nth-child(3){
     position: relative;
-    top : 200px;
     animation-delay: .4s;
   }
   section::before{
