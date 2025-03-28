@@ -8,6 +8,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.keyCode === 27) {  
+      window.location.href = "main.html";
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll("section");
   
@@ -21,3 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
   
     elements.forEach((el) => observer.observe(el));
   });
+

@@ -15,6 +15,10 @@ document.addEventListener("keydown", (event) => {
 
         window.location.href = nextPage;
     }
+
+    if (event.code === "Escape") {  
+        window.location.href = "../journal-mapping.html";
+    }
 });
 
 function typeWriterEffect(element, speed = 50) {

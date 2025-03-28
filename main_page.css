@@ -22,6 +22,16 @@ body {
     
 }
 
+footer {
+  position: absolute;
+  align-items: center;
+  bottom: .5em;
+  padding: 1em;
+  font-size: 1em;
+
+  text-align: center;
+}
+
 .title{
   line-height: normal;
   text-align: center;
@@ -55,7 +65,7 @@ body {
 .fixed-position {
     position: fixed;
     text-align: center;
-    top: 20em;
+    top: 35em;
 
     animation: fadeIn 1.5s ease-in-out;
   }
