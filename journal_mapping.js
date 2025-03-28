@@ -10,8 +10,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener("keydown", (event) => {
   if (event.keyCode === 27) {  
-      window.location.href = "main.html";
-  }
+    history.back();
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {

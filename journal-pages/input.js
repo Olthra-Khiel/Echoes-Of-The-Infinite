@@ -17,7 +17,7 @@ document.addEventListener("keydown", (event) => {
     }
 
     if (event.code === "Escape") {  
-        window.location.href = "../journal-mapping.html";
+        history.back();
     }
 });
 
